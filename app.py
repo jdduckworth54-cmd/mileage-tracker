@@ -61,7 +61,7 @@ with st.form("trip_form", clear_on_submit=True):
     start_loc = st.text_input("Starting From", value=DEFAULT_START)
     end_loc = st.text_input("Destination Address")
     
-    submit_button = st.form_submit_with_button("Calculate & Record Trip")
+   submit_button = st.form_submit_button("Calculate & Record Trip")
 
 # Logic Handle
 if submit_button:
