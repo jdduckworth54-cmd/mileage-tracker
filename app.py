@@ -7,10 +7,12 @@ import os
 # --- CONFIGURATION ---
 CSV_FILE = "mileage_log.csv"
 DEFAULT_START = "Your Home Address, City, State, ZIP" # Pre-fill your default starting point
+# --- CONFIGURATION ---
+CSV_FILE = "mileage_log.csv"
+DEFAULT_START = "Your Home Address, City, State, ZIP"
 
-# Initialize Google Maps Client
-# Replace with your actual API key or set an environment variable
-API_KEY = os.environ.get("AIzaSyDDGZ8rMyZ6nASjsDz4NpNorzyavoTgsBs")
+# Initialize Google Maps Client directly from Streamlit Secrets
+API_KEY = st.secrets["GOOGLE_MAPS_API_KEY"]
 gmaps = googlemaps.Client(key=API_KEY)
 
 # --- HELPER FUNCTIONS ---
